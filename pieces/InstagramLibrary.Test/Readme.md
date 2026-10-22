@@ -1,25 +1,27 @@
+**Languages:** [English](Readme.md) · [Español](README.es.md)
+
 # InstagramLibrary.Test
 
 <!-- BEGIN project-context -->
 
-## Antigüedad y evidencia
+## Historical dates and evidence
 
-**Año de referencia de esta versión: 2020.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+**Reference year for this version: 2020.** This uses the most recent source or configuration file with a recoverable historical date; the exact creation date could not be confirmed.
 
-- Archivo más reciente datable: **2020-06-05**, [`pieces/InstagramLibrary.Test/InstagramPageTest.cs`](InstagramPageTest.cs); fecha del commit que modificó el archivo, recuperada del Git local.
-- Primer registro del repositorio Git original que contiene este código: **2020-05-10**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
-- Dependencia fechada más reciente entre las comprobadas: [PuppeteerSharp.Contrib.Extensions 2.0.0](https://www.nuget.org/packages/PuppeteerSharp.Contrib.Extensions/2.0.0), publicada el **2020-05-08** (versión declarada), en [`pieces/InstagramLibrary.Test/InstagramLibrary.Test.csproj`](InstagramLibrary.Test.csproj).
-- Referencia adicional: destino `netcoreapp3.1` en [`pieces/InstagramLibrary.Test/InstagramLibrary.Test.csproj`](InstagramLibrary.Test.csproj); su [versión estable se publicó el 2019-12-03](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core). Es una pista de generación tecnológica; pudieron existir versiones preliminares anteriores.
+- Most recent datable file: **2020-06-05**, [`pieces/InstagramLibrary.Test/InstagramPageTest.cs`](InstagramPageTest.cs); date of the commit modifying the file, recovered from local Git history.
+- First record in the original Git repository containing this code: **2020-05-10**. This may be an import and does not establish when the code was first written.
+- Most recently published dependency among those checked: [PuppeteerSharp.Contrib.Extensions 2.0.0](https://www.nuget.org/packages/PuppeteerSharp.Contrib.Extensions/2.0.0), published on **2020-05-08** (declared version), in [`pieces/InstagramLibrary.Test/InstagramLibrary.Test.csproj`](InstagramLibrary.Test.csproj).
+- Additional reference: target `netcoreapp3.1` in [`pieces/InstagramLibrary.Test/InstagramLibrary.Test.csproj`](InstagramLibrary.Test.csproj); its [stable release was published on 2019-12-03](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core). This indicates the technology generation; earlier preview releases may have existed.
 
-La publicación de una dependencia sitúa la configuración conservada a partir de esa versión, si la referencia es válida. Una actualización de paquetes puede ser mucho más reciente que el inicio del proyecto. No se restauraron paquetes para comprobarlo.
+A dependency's publication places the preserved configuration at or after that version, if the reference is valid. Package updates may be much newer than the project's beginnings. Packages were not restored to verify this.
 
-Se descartaron las marcas de tiempo de la copia de octubre de 2026 y los documentos generados durante esta revisión. Las fechas recuperables no garantizan que no existan cambios posteriores sin datar.
+October 2026 copy timestamps and documents generated during this review were excluded. Recoverable dates do not guarantee that there are no later, undated changes.
 
-## Por qué merece la pena mirarlo
+## Why this is worth exploring
 
-Los ejemplos recorren subida y programación de contenido mediante navegador. Ayudan a entender el uso del cliente y la dependencia de sesiones externas, antes de intentar ejecutar automatizaciones.
+Examples cover browser-based content uploading and scheduling. They explain client usage and external session dependencies before attempting to run automation.
 
-Puntos de entrada al código:
+Code entry points:
 
 - [`InstagramPageTest.cs`](InstagramPageTest.cs)
 

@@ -1,65 +1,67 @@
+**Languages:** [English](README.md) · [Español](README.es.md)
+
 # InstaClient
 
-Cliente experimental C# para operaciones web de Instagram mediante RestSharp, cookies y CSRF: inicio de sesión, consulta de usuarios/fotos, seguidores y acciones de seguir, dejar de seguir y dar me gusta.
+Experimental C# client for Instagram web operations using RestSharp, cookies, and CSRF: login, user/photo queries, followers, and follow, unfollow, and like actions.
 
-Documentación basada en los archivos locales revisados el 21 de octubre de 2026.
+Documentation based on local files reviewed on 21 October 2026.
 
 <!-- BEGIN project-context -->
 
-## Antigüedad y evidencia
+## Historical dates and evidence
 
-**Año de referencia de esta versión: 2020.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+**Reference year for this version: 2020.** This uses the most recent source or configuration file with a recoverable historical date; the exact creation date could not be confirmed.
 
-- Archivo más reciente datable: **2020-05-12**, [`InstaClient/InstaClient/ClientTest/Program.cs`](InstaClient/ClientTest/Program.cs); fecha de modificación conservada.
-- Primer registro del repositorio Git original que contiene este código: **2017-11-02**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
-- Dependencia fechada más reciente entre las comprobadas: [RestSharp 105.2.3](https://www.nuget.org/packages/RestSharp/105.2.3), publicada el **2015-08-26** (versión declarada), en [`InstaClient/InstaClient/ClientTest/ClientTest.csproj`](InstaClient/ClientTest/ClientTest.csproj).
-- Referencia adicional: destino `netcoreapp3.1` en [`InstaClient/InstaClient/ClientTest/ClientTest.csproj`](InstaClient/ClientTest/ClientTest.csproj); su [versión estable se publicó el 2019-12-03](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core). Es una pista de generación tecnológica; pudieron existir versiones preliminares anteriores.
+- Most recent datable file: **2020-05-12**, [`InstaClient/InstaClient/ClientTest/Program.cs`](InstaClient/ClientTest/Program.cs); preserved modification timestamp.
+- First record in the original Git repository containing this code: **2017-11-02**. This may be an import and does not establish when the code was first written.
+- Most recently published dependency among those checked: [RestSharp 105.2.3](https://www.nuget.org/packages/RestSharp/105.2.3), published on **2015-08-26** (declared version), in [`InstaClient/InstaClient/ClientTest/ClientTest.csproj`](InstaClient/ClientTest/ClientTest.csproj).
+- Additional reference: target `netcoreapp3.1` in [`InstaClient/InstaClient/ClientTest/ClientTest.csproj`](InstaClient/ClientTest/ClientTest.csproj); its [stable release was published on 2019-12-03](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core). This indicates the technology generation; earlier preview releases may have existed.
 
-La publicación de una dependencia sitúa la configuración conservada a partir de esa versión, si la referencia es válida. Una actualización de paquetes puede ser mucho más reciente que el inicio del proyecto. No se restauraron paquetes para comprobarlo.
+A dependency's publication places the preserved configuration at or after that version, if the reference is valid. Package updates may be much newer than the project's beginnings. Packages were not restored to verify this.
 
-## Por qué merece la pena mirarlo
+## Why this is worth exploring
 
-El cliente modela operaciones web utilizando RestSharp, cookies y CSRF. Es útil para estudiar la encapsulación de una sesión HTTP y la conversión de respuestas en modelos, teniendo presente que corresponde a endpoints históricos.
+The client models web operations using RestSharp, cookies, and CSRF. It is useful for studying HTTP session encapsulation and conversion of responses into models, while remembering that it targets historical endpoints.
 
-Puntos de entrada al código:
+Code entry points:
 
 - [`InstaClient/InstaClient/InstaRestClient.cs`](InstaClient/InstaClient/InstaRestClient.cs)
 - [`InstaClient/InstaClient/Followers.cs`](InstaClient/InstaClient/Followers.cs)
 
 <!-- END project-context -->
 
-## Estructura y responsabilidades
+## Structure and responsibilities
 
-| Ruta | Responsabilidad |
+| Path | Responsibility |
 | --- | --- |
-| `InstaClient/InstaClient/InstaRestClient.cs` | Cliente HTTP y operaciones de Instagram. |
-| `InstaClient/InstaClient/` | Modelos de usuarios, seguidores, fotos, localización y respuestas. |
-| `InstaClient/ClientTest/` | Programa de prueba del cliente. |
-| `InstaClient/InstaClient.sln` | Solución de Visual Studio. |
+| `InstaClient/InstaClient/InstaRestClient.cs` | HTTP client and Instagram operations. |
+| `InstaClient/InstaClient/` | User, follower, photo, location, and response models. |
+| `InstaClient/ClientTest/` | Client test program. |
+| `InstaClient/InstaClient.sln` | Visual Studio solution. |
 
-## Tecnologías y requisitos
+## Technologies and requirements
 
-RestSharp 105.2.3. La biblioteca apunta a .NET Framework 4.5.2 y ClientTest a .NET Core 3.1: revisar la compatibilidad entre proyectos y referencias antes de ejecutarlos.
+RestSharp 105.2.3. The library targets .NET Framework 4.5.2, while ClientTest targets .NET Core 3.1: review project and reference compatibility before running them.
 
-Destinos leídos de los proyectos: `netcoreapp3.1`, `v4.5.2`.
+Targets read from project files: `netcoreapp3.1`, `v4.5.2`.
 
-## Preparación y arranque
+## Setup and startup
 
-Abrir InstaClient/InstaClient.sln, restaurar NuGet y revisar el programa de prueba. Proporcionar cuentas y configuración propias solo en un entorno de pruebas; no se iniciaron sesiones ni acciones sobre cuentas.
+Open InstaClient/InstaClient.sln, restore NuGet packages, and review the test program. Provide your own accounts and configuration only in a test environment; no logins or account actions were performed.
 
-Soluciones presentes: `InstaClient/InstaClient.sln`.
+Solutions present: `InstaClient/InstaClient.sln`.
 
-## Configuración e integraciones
+## Configuration and integrations
 
-El constructor fija encabezados y la URL base. Las credenciales se pasan a LogIn y el cliente mantiene cookies/CSRF en memoria. Revisar proxy y cualquier persistencia antes de reutilizarlo.
+The constructor sets headers and the base URL. Credentials are passed to LogIn, and the client keeps cookies/CSRF in memory. Review proxy settings and any persistence before reuse.
 
-## Estado de esta copia
+## Status of this copy
 
-Utiliza endpoints web históricos de Instagram; el análisis local no comprueba su compatibilidad actual. Se conserva el README anterior.
+Uses historical Instagram web endpoints; local analysis does not verify current compatibility. The previous README is retained.
 
-La revisión fue estática: no se restauraron dependencias, no se compiló ni se ejecutaron aplicaciones o pruebas. Los comandos anteriores son instrucciones de preparación, no resultados de validación. Las versiones indicadas son las del código conservado.
+The review was static: dependencies were not restored, and applications and tests were neither built nor run. The commands above are setup instructions, not validation results. Listed versions describe the preserved code.
 
 
-## Copia pública
+## Public copy
 
-Las credenciales originales se han retirado o sustituido por `REPLACE_WITH_YOUR_VALUE`. Los datos locales, sesiones, certificados privados y perfiles de despliegue se omiten. Configurar servicios y credenciales propios antes de ejecutar. La compilación y el funcionamiento con servicios externos no se han validado.
+Original credentials have been removed or replaced with `REPLACE_WITH_YOUR_VALUE`. Local data, sessions, private certificates, and deployment profiles are omitted. Configure your own services and credentials before running. Building and operation with external services have not been validated.
